@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Graphic Designer Portfolio - Specializing in brand identity, logo design, print and digital media.">
+    <meta name="keywords" content="graphic design, portfolio, logo design, branding, print design, digital media">
+    <title>Major Graphics | Graphic Design Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="Logo" />
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Designing dreams into <span class="accent">Reality</span></h1>
+                <p class="hero-subtitle">Professional Graphic Designer specializing in brand identity and 
+                    social media designs .</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know the creative mind behind the designs</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/profile.png" alt="Profile Photo">
+                </div>
+                <div class="about-text">
+                    <h3>Hello, I'm <span class="accent">Collan Sang</span></h3>
+                    <p>With over 3 years of experience in graphic design, I've developed a keen eye for
+                         detail and a passion for creating visually compelling designs that communicate 
+                         effectively.</p>
+                    <p>My design philosophy centers around the belief that good design should be both 
+                        beautiful and functional. I work closely with clients to understand their vision 
+                        and translate it into designs that resonate with their target audience.</p>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <h4>Adobe Creative Suite</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4></h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Brand Identity</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Typography</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Portfolio</h2>
+                <p class="section-subtitle">Check out some of my recent projects</p>
+            </div>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="social">Social Media</button>
+                <button class="filter-btn" data-filter="event">Event</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-img">
+                        <img src="assets/business-1.jpg" alt="Business Branding Project">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Modern Branding</h3>
+                                <p>Business Identity</p>
+                                <a href="assets/business-1.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="social">
+                    <div class="portfolio-img">
+                        <img src="assets/social-1.jpg" alt="Social Media Campaign">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Social Campaign</h3>
+                                <p>Social Media Design</p>
+                                <a href="assets/social-1.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="event">
+                    <div class="portfolio-img">
+                        <img src="assets/event-1.jpg" alt="Event Promotion">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Festival Poster</h3>
+                                <p>Event Design</p>
+                                <a href="assets/event-1.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="business">
+                    <div class="portfolio-img">
+                        <img src="assets/business-2.jpg" alt="Business Card Design">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Stationary Design</h3>
+                                <p>Business Card & Letterhead</p>
+                                <a href="assets/business-2.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="social">
+                    <div class="portfolio-img">
+                        <img src="assets/social-2.jpg" alt="Instagram Template">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Instagram Suite</h3>
+                                <p>Social Media design</p>
+                                <a href="assets/social-2.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="event">
+                    <div class="portfolio-img">
+                        <img src="assets/event-2.jpg" alt="Concert Promotion">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Concert Materials</h3>
+                                <p>Event Promotion</p>
+                                <a href="assets/event-2.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-img">
+                        <img src="assets/birthday-1.jpg" alt="Birthday Branding">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Birthday Package</h3>
+                                <p>Event Branding</p>
+                                <a href="assets/birthday-1.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-img">
+                        <img src="assets/birthday-2.jpg" alt="Party Invitation">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Birthday Design</h3>
+                                <p>Print Design</p>
+                                <a href="assets/birthday-2.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Services</h2>
+                <p class="section-subtitle">Tailored design solutions to elevate your brand</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="service-title">Brand Identity</h3>
+                    <p class="service-description">Develop a cohesive visual language for 
+                        your brand including logo design, color palette, 
+                        typography, and brand guidelines.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="service-title">Digital Design</h3>
+                    <p class="service-description">Create engaging digital assets for websites,
+                         social media, email marketing, and digital advertising campaigns.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3 class="service-title">Print Design</h3>
+                    <p class="service-description">Design print materials including business 
+                        cards, brochures, packaging, posters, banners, and other promotional items.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="service-title">Marketing Collateral</h3>
+                    <p class="service-description">Develop cohesive marketing materials that effectively
+                         communicate your message and enhance your marketing strategy.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="service-title">Event Graphics</h3>
+                    <p class="service-description">Design comprehensive visual identities for events,
+                         including invitations, signage, programs, and social media assets.</p>
+                </div>
+                <!-- <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="service-title">Photo Editing</h3>
+                    <p class="service-description">Professional photo retouching, color correction, and 
+                        image manipulation to enhance your visual content.</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">What my clients say about my work</p>
+            </div>
+            <div class="testimonial-slider" id="testimonialSlider">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"Working with Collan was an absolute pleasure. They took our vague ideas
+                                 and transformed them into a stunning brand identity that perfectly 
+                                 captures our company's essence. The attention to detail and creativity 
+                                 exceeded our expectations."</p>
+                        </div>
+                        <div class="testimonial-client">
+                            <div class="client-img">
+                                <img src="assets/client.jpg" alt="Client">
+                            </div>
+                            <div class="client-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>CEO, Brighten Technologies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"The social media templates Alex designed for our brand have completely 
+                                transformed our online presence. We've seen a significant increase in 
+                                engagement since implementing the new design system. I highly recommend 
+                                their services!"</p>
+                        </div>
+                        <div class="testimonial-client">
+                            <div class="client-img">
+                                <img src="assets/client.jpg" alt="Client">
+                            </div>
+                            <div class="client-info">
+                                <h4>Michael Rodriguez</h4>
+                                <p>Marketing Director, Urban Outfitters</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"Alex delivered exceptional designs for our annual conference. 
+                                From the initial concept to the final execution, every piece was 
+                                thoughtfully created and beautifully designed. We received numerous 
+                                compliments on the event materials."</p>
+                        </div>
+                        <div class="testimonial-client">
+                            <div class="client-img">
+                                <img src="assets/client.jpg" alt="Client">
+                            </div>
+                            <div class="client-info">
+                                <h4>Jennifer Lee</h4>
+                                <p>Event Manager, Global Summit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="testimonial-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots" id="testimonialDots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+                <button class="testimonial-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss your project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>majorgraphics2@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>+254746581478</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/dr.majorgraphics?igsh=MXBibjA4Z2hjNXA5Ng== " target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pin.it/2NbE06rVI" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.tiktok.com/@majorgraphics2?_t=ZM-8v90h9oDire&_r=1" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/in/collan-sang-a51b88282 " target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://t.me/Majorgraphics2" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="https://wa.me/message/26BQRDWJTFGPL1?src=qr" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Major<span class="accent">Graphics</span></span>
+                </div>
+                <p class="footer-text">Creating impactful designs that help businesses thrive.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <p class="copyright">&copy; 2025 Collan Sang. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <!-- Back To Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="script.js"></script>
+</body>
+</html>
