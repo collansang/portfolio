@@ -1,455 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Graphic Designer Portfolio - Specializing in brand identity, logo design, print and digital media.">
-    <meta name="keywords" content="graphic design, portfolio, logo design, branding, print design, digital media">
-    <title>Major Graphics | Graphic Design Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MG — Graphic Design Studio</title>
+<meta name="description" content="MG is a graphic design studio building bold identities, packaging and editorial work for brands that refuse to blend in.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header" id="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <img src="assets/logo.png" alt="Logo" />
-                </div>
-                <div class="nav-toggle" id="navToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Designing dreams into <span class="accent">Reality</span></h1>
-                <p class="hero-subtitle">Professional Graphic Designer specializing in brand identity and 
-                    social media designs .</p>
-                <div class="hero-buttons">
-                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<header>
+  <nav class="wrap">
+    <a href="#top" class="brand">
+      <img src="assets/logo.png" alt="MG logo">
+      <span>MG</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Start a project</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
 
-    <!-- About Section -->
-    <section class="about section" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know the creative mind behind the designs</p>
-            </div>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="assets/profile.png" alt="Profile Photo">
-                </div>
-                <div class="about-text">
-                    <h3>Hello, I'm <span class="accent">Collan Sang</span></h3>
-                    <p>With over 3 years of experience in graphic design, I've developed a keen eye for
-                         detail and a passion for creating visually compelling designs that communicate 
-                         effectively.</p>
-                    <p>My design philosophy centers around the belief that good design should be both 
-                        beautiful and functional. I work closely with clients to understand their vision 
-                        and translate it into designs that resonate with their target audience.</p>
-                    <div class="skills">
-                        <div class="skill-item">
-                            <h4>Adobe Creative Suite</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <h4></h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Brand Identity</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Typography</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#contact" class="btn btn-primary">Let's Work Together</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#work">Work</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#process">Process</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="nav-cta">Start a project</a>
+</div>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio section" id="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">My Portfolio</h2>
-                <p class="section-subtitle">Check out some of my recent projects</p>
-            </div>
-            <div class="portfolio-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="branding">Branding</button>
-                <button class="filter-btn" data-filter="social">Social Media</button>
-                <button class="filter-btn" data-filter="event">Event</button>
-                <button class="filter-btn" data-filter="business">Business</button>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="branding">
-                    <div class="portfolio-img">
-                        <img src="assets/business-1.jpg" alt="Business Branding Project">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3>Modern Branding</h3>
-                                <p>Business Identity</p>
-                                <a href="assets/business-1.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="social">
-                    <div class="portfolio-img">
-                        <img src="assets/social-1.jpg" alt="Social Media Campaign">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3>Social Campaign</h3>
-                                <p>Social Media Design</p>
-                                <a href="assets/social-1.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="event">
-                    <div class="portfolio-img">
-                        <img src="assets/event-1.jpg" alt="Event Promotion">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3>Festival Poster</h3>
-                                <p>Event Design</p>
-                                <a href="assets/event-1.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="business">
-                    <div class="portfolio-img">
-                        <img src="assets/business-2.jpg" alt="Business Card Design">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3>Stationary Design</h3>
-                                <p>Business Card & Letterhead</p>
-                                <a href="assets/business-2.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="social">
-                    <div class="portfolio-img">
-                        <img src="assets/social-2.jpg" alt="Instagram Template">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3>Instagram Suite</h3>
-                                <p>Social Media design</p>
-                                <a href="assets/social-2.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="event">
-                    <div class="portfolio-img">
-                        <img src="assets/event-2.jpg" alt="Concert Promotion">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3>Concert Materials</h3>
-                                <p>Event Promotion</p>
-                                <a href="assets/event-2.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="branding">
-                    <div class="portfolio-img">
-                        <img src="assets/birthday-1.jpg" alt="Birthday Branding">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3>Birthday Package</h3>
-                                <p>Event Branding</p>
-                                <a href="assets/birthday-1.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="branding">
-                    <div class="portfolio-img">
-                        <img src="assets/birthday-2.jpg" alt="Party Invitation">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3>Birthday Design</h3>
-                                <p>Print Design</p>
-                                <a href="assets/birthday-2.jpg" class="portfolio-link"><i class="fas fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<main id="top">
 
-    <!-- Services Section -->
-    <section class="services section" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">My Services</h2>
-                <p class="section-subtitle">Tailored design solutions to elevate your brand</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3 class="service-title">Brand Identity</h3>
-                    <p class="service-description">Develop a cohesive visual language for 
-                        your brand including logo design, color palette, 
-                        typography, and brand guidelines.</p>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fas fa-desktop"></i>
-                    </div>
-                    <h3 class="service-title">Digital Design</h3>
-                    <p class="service-description">Create engaging digital assets for websites,
-                         social media, email marketing, and digital advertising campaigns.</p>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fas fa-print"></i>
-                    </div>
-                    <h3 class="service-title">Print Design</h3>
-                    <p class="service-description">Design print materials including business 
-                        cards, brochures, packaging, posters, banners, and other promotional items.</p>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-                    <h3 class="service-title">Marketing Collateral</h3>
-                    <p class="service-description">Develop cohesive marketing materials that effectively
-                         communicate your message and enhance your marketing strategy.</p>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3 class="service-title">Event Graphics</h3>
-                    <p class="service-description">Design comprehensive visual identities for events,
-                         including invitations, signage, programs, and social media assets.</p>
-                </div>
-                <!-- <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <h3 class="service-title">Photo Editing</h3>
-                    <p class="service-description">Professional photo retouching, color correction, and 
-                        image manipulation to enhance your visual content.</p>
-                </div> -->
-            </div>
+  <section class="hero">
+    <div class="hero-cut" aria-hidden="true"></div>
+    <div class="wrap">
+      <div>
+        <span class="hero-eyebrow"><i></i>Graphic design &nbsp; - Nairobi &amp; remote</span>
+        <h1>Identities that hold their <em>shape</em> under pressure.</h1>
+        <p class="lead">I'm Major Graphics, a graphic designer with 4+ years of experience building visual identities, digital content, and brand systems for founders and businesses who want to look as sharp as their ambition. Every design is built with purpose, not simply decorated.
+</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn-solid">See the work</a>
+          <a href="#contact" class="btn-ghost">Book a call</a>
         </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials section" id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Client Testimonials</h2>
-                <p class="section-subtitle">What my clients say about my work</p>
-            </div>
-            <div class="testimonial-slider" id="testimonialSlider">
-                <div class="testimonial-slide active">
-                    <div class="testimonial-content">
-                        <div class="testimonial-text">
-                            <p>"Working with Collan was an absolute pleasure. They took our vague ideas
-                                 and transformed them into a stunning brand identity that perfectly 
-                                 captures our company's essence. The attention to detail and creativity 
-                                 exceeded our expectations."</p>
-                        </div>
-                        <div class="testimonial-client">
-                            <div class="client-img">
-                                <img src="assets/client.jpg" alt="Client">
-                            </div>
-                            <div class="client-info">
-                                <h4>Sarah Johnson</h4>
-                                <p>CEO, Brighten Technologies</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-slide">
-                    <div class="testimonial-content">
-                        <div class="testimonial-text">
-                            <p>"The social media templates Alex designed for our brand have completely 
-                                transformed our online presence. We've seen a significant increase in 
-                                engagement since implementing the new design system. I highly recommend 
-                                their services!"</p>
-                        </div>
-                        <div class="testimonial-client">
-                            <div class="client-img">
-                                <img src="assets/client.jpg" alt="Client">
-                            </div>
-                            <div class="client-info">
-                                <h4>Michael Rodriguez</h4>
-                                <p>Marketing Director, Urban Outfitters</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-slide">
-                    <div class="testimonial-content">
-                        <div class="testimonial-text">
-                            <p>"Alex delivered exceptional designs for our annual conference. 
-                                From the initial concept to the final execution, every piece was 
-                                thoughtfully created and beautifully designed. We received numerous 
-                                compliments on the event materials."</p>
-                        </div>
-                        <div class="testimonial-client">
-                            <div class="client-img">
-                                <img src="assets/client.jpg" alt="Client">
-                            </div>
-                            <div class="client-info">
-                                <h4>Jennifer Lee</h4>
-                                <p>Event Manager, Global Summit</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-controls">
-                <button class="testimonial-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-                <div class="testimonial-dots" id="testimonialDots">
-                    <span class="dot active" data-slide="0"></span>
-                    <span class="dot" data-slide="1"></span>
-                    <span class="dot" data-slide="2"></span>
-                </div>
-                <button class="testimonial-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
-            </div>
+      </div>
+      <div class="hero-about" id="about">
+        <span class="kicker"><i></i>About</span>
+        <h3>Design that starts with structure, not decoration.</h3>
+        <p>With 4+ years of experience in graphic design, I've helped brands turn ideas into visual identities they can confidently own. I build design systems that stay clear and consistent across a business card, billboard, social feed, or five-second scroll. Clients come to me when "nice" isn't enough — when the design needs to communicate, differentiate, and be remembered.</p>
+        <div class="stats">
+          <div class="stat"><b>4+</b><span>Years in practice</span></div>
+          <div class="stat"><b>20+</b><span>Brands shipped</span></div>
+          <div class="stat"><b>8</b><span>Industries</span></div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact section" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's discuss your project</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Location</h3>
-                            <p>Nairobi, Kenya</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Email</h3>
-                            <p>majorgraphics2@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Phone</h3>
-                            <p>+254746581478</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/dr.majorgraphics?igsh=MXBibjA4Z2hjNXA5Ng== " target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="https://pin.it/2NbE06rVI" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-pinterest"></i></a>
-                        <a href="https://www.tiktok.com/@majorgraphics2?_t=ZM-8v90h9oDire&_r=1" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://www.linkedin.com/in/collan-sang-a51b88282 " target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://t.me/Majorgraphics2" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-telegram"></i></a>
-                        <a href="https://wa.me/message/26BQRDWJTFGPL1?src=qr" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject">
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-text">Major<span class="accent">Graphics</span></span>
-                </div>
-                <p class="footer-text">Creating impactful designs that help businesses thrive.</p>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#services">Services</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <p class="copyright">&copy; 2025 Collan Sang. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <span class="lightbox-close" id="lightboxClose">&times;</span>
-        <img class="lightbox-img" id="lightboxImg">
+      </div>
     </div>
+    <div class="scroll-cue"><span class="line"></span>Scroll</div>
+  </section>
 
-    <!-- Back To Top Button -->
-    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span><i></i>Brand Identity</span>
+      <span><i></i>Logo Design</span>
+      <span><i></i>Posters &amp; Flyers</span>
+      <span><i></i>Social Media Design</span>
+      <span><i></i>Banner Design</span>
+      <span><i></i>Brochures</span>
+      <span><i></i>Bussiness Cards</span>
+      <span><i></i>Digital Content</span>
 
-    <script src="script.js"></script>
+      <span><i></i>Brand Identity</span>
+      <span><i></i>Logo Design</span>
+      <span><i></i>Posters &amp; Flyers</span>
+      <span><i></i>Social Media Design</span>
+      <span><i></i>Banner Design</span>
+      <span><i></i>Brochures</span>
+      <span><i></i>Bussiness Cards</span>
+      <span><i></i>Digital Content</span>
+    </div>
+  </div>
+
+  <section class="work section-pad" id="work">
+    <div class="wrap">
+      <div class="work-head">
+        <div>
+          <span class="kicker"><i></i>Selected work</span>
+          <h2 class="section-title">Design built to solve real problems.</h2>
+        </div>
+        <div class="work-filter" id="workFilter">
+          <button class="active" data-filter="all">All</button>
+          <button data-filter="brand">Branding</button>
+          <button data-filter="print">Print</button>
+          <button data-filter="digital">Digital</button>
+        </div>
+      </div>
+
+      <div class="work-grid" id="workGrid"></div>
+    </div>
+  </section>
+
+  <section class="services section-pad" id="services">
+    <div class="wrap">
+      <span class="kicker"><i></i>Services</span>
+      <h2 class="section-title">Where I can help.</h2>
+
+      <div class="service-list">
+        <div class="service-row">
+          <span class="idx">01</span>
+          <h3>Brand identity</h3>
+          <div>
+            <p>Logos, business cards, brand colours, fonts and complete visual identities for businesses that want a professional and recognizable brand.</p>
+            <div class="list"><span>Logo design</span><span>Brand guidelines</span><span>Visual systems</span></div>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="idx">02</span>
+          <h3>Posters &amp; Prints</h3>
+          <div>
+            <p>Business cards, flyers, brochures, posters, invitations and other designs prepared for printing and promotion.</p>
+            <div class="list"><span>Business cards</span><span>Flyers</span><span>Posters</span></div>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="idx">03</span>
+          <h3>Social &amp; Digital</h3>
+          <div>
+            <p>Event posters, social media posts, business adverts, promotional graphics, YouTube thumbnails and other digital designs.</p>
+            <div class="list"><span>Event Posters</span><span>Social Media Posts</span><span>Digital Adverts</span></div>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="idx">04</span>
+          <h3>Photo &amp; Presentation Design</h3>
+          <div>
+            <p>Photo retouching, background removal, image enhancement, presentation slides and other visual materials for businesses and organizations.</p>
+            <div class="list"><span>Presentations</span><span>Photo Editing</span><span>Image Enhancement</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process section-pad" id="process">
+    <div class="wrap">
+      <span class="kicker"><i></i>How we'd work together</span>
+      <h2 class="section-title">Four stages, start to delivery.</h2>
+
+      <div class="process-grid">
+        <div class="process-item">
+          <span class="n">01 - Tell me what you need</span>
+          <h3>Understand the brief</h3>
+          <p>Share what you're looking for, where the design will be used, your preferred style, deadline, and any references or materials you already have.</p>
+        </div>
+        <div class="process-item">
+          <span class="n">02 - Plan the design</span>
+          <h3>Set the direction</h3>
+          <p>We clarify the direction, content, visual style, and requirements before the actual design work begins.</p>
+        </div>
+        <div class="process-item">
+          <span class="n">003 - Design & refine</span>
+          <h3>Build the system</h3>
+          <p>I develop the design and make revisions based on your feedback until everything is clear, polished, and ready to use.</p>
+        </div>
+        <div class="process-item">
+          <span class="n">04 - Final delivery</span>
+          <h3>Hand it off</h3>
+          <p>You receive the finished files in the formats you need, prepared for print, social media, digital use, or wherever the design will be used.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials section-pad" id="testimonials">
+    <div class="wrap">
+      <span class="kicker"><i></i>Client feedback</span>
+      <h2 class="section-title">What it's like to work together.</h2>
+
+      <div class="t-accordion" id="tAccordion">
+        <div class="t-item">
+          <button class="t-item-head" aria-expanded="false">
+            <div class="who"><div class="avatar"></div><div><b>Mwanza Joel</b><span>Founder, Doku Collections</span></div></div>
+            <span class="plus"></span>
+          </button>
+          <div class="t-item-body"><p>Great work MG, You are really Major. I would definitely work with you again.</p></div>
+        </div>
+        <div class="t-item">
+          <button class="t-item-head" aria-expanded="false">
+            <div class="who"><div class="avatar"></div><div><b>Brian Kessler</b><span>Partner, Kessler &amp; Vine</span></div></div>
+            <span class="plus"></span>
+          </button>
+          <div class="t-item-body"><p>At first, I was concerned about the scope of the project, but MG understood exactly what I was looking for, even when I wasn't sure how to explain it. The final design came out better than I expected, and the whole process was smooth and professional. I’d definitely work with Major Graphics again</p></div>
+        </div>
+        <div class="t-item">
+          <button class="t-item-head" aria-expanded="false">
+            <div class="who"><div class="avatar"></div><div><b>Maggie & Eric</b><span>Founders, M &E Visuals</span></div></div>
+            <span class="plus"></span>
+          </button>
+          <div class="t-item-body"><p>MG really understood what we wanted and brought the idea to life. We loved the final design and the whole process was smooth.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact section-pad" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="kicker"><i></i>Get in touch</span>
+        <h2>Let's build something worth remembering.</h2>
+        <p class="lead">Tell me what you need designed, when you need it, and any ideas or references you already have. I'll review the details and get back to you with the next steps.</p>
+       <div class="contact-direct">
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=majorgraphics2@gmail.com"
+     target="_blank"
+     rel="noopener">
+    majorgraphics2@gmail.com
+  </a>
+  <span>Prefer WhatsApp or email? You can reach out directly.</span>
+</div>
+      </div>
+
+      <div class="form-cta">
+        <p>Tell me what you need.<br>
+Share a few details about your project, including the design you need, your deadline, and your budget. The more I know, the better I can understand what you're looking for.<br></p>
+        <a class="gform-btn" href="https://forms.gle/bpHuz2zXJT1cKejs8" target="_blank" rel="noopener">
+          Start a design request
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <a href="#top" class="footer-brand">
+        <img src="assets/logo.png" alt="MG logo">
+        <span>Major Graphics</span>
+      </a>
+      <div class="footer-links">
+  <a href="#work">Work</a>
+  <a href="#services">Services</a>
+</div>
+
+<div class="footer-social">
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/majorgraphics__" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+    </svg>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/collan-sang" target="_blank" rel="noopener" aria-label="LinkedIn">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M5 3.5A2.5 2.5 0 1 1 5 8.5 2.5 2.5 0 0 1 5 3.5ZM3.5 10h3v10h-3V10Zm5 0h2.9v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V20h-3v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V20h-2.83V10Z"/>
+    </svg>
+  </a>
+
+  <!-- TikTok -->
+  <a href="https://www.tiktok.com/@majorgraphics__" target="_blank" rel="noopener" aria-label="TikTok">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M15.5 3c.25 2.1 1.42 3.48 3.5 3.62v3.02c-1.2.12-2.3-.28-3.46-1.02v6.2c0 4.9-5.35 6.44-8.03 3.13-1.72-2.13-.67-5.88 2.42-6.9.58-.19 1.2-.27 1.82-.24v3.1c-.23-.02-.46-.01-.68.03-1.06.2-1.7 1.14-1.45 2.18.48 1.97 4.02 2.03 4.02-.74V3h1.86Z"/>
+    </svg>
+  </a>
+
+</div>
+     
+    <div class="footer-bottom wrap" style="padding-left:0;padding-right:0;">
+      <span>&copy; <span id="year"></span> Major Graphics. All rights reserved.</span>
+      <span>Built with grids, sharp angles, and too much coffee.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/254746581478" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="none"><path fill="#faf8f4" d="M16.01 3C9.38 3 4 8.36 4 14.98c0 2.2.6 4.26 1.63 6.04L4 29l8.2-2.55a12.9 12.9 0 0 0 3.8.58h.01c6.63 0 12.01-5.36 12.01-11.98C28.02 8.36 22.64 3 16.01 3Zm0 21.94h-.01a10.9 10.9 0 0 1-5.56-1.53l-.4-.24-4.87 1.51 1.53-4.75-.26-.4a9.92 9.92 0 0 1-1.55-5.55C4.9 9.44 9.9 4.98 16.01 4.98c2.85 0 5.53 1.12 7.55 3.13a10.7 10.7 0 0 1 3.13 7.6c0 5.53-4.51 9.23-8.68 9.23Zm5.88-7.16c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.51-.16-.73.16-.21.32-.84 1.05-1.03 1.26-.19.21-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.6-.95-.85-1.59-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.56.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.73-1.77-1-2.42-.26-.63-.53-.55-.73-.56-.19-.01-.4-.01-.62-.01-.21 0-.56.08-.86.4-.29.32-1.13 1.11-1.13 2.7 0 1.6 1.16 3.14 1.32 3.36.16.21 2.28 3.5 5.53 4.9.77.34 1.38.54 1.85.68.78.25 1.48.21 2.04.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.62-.37Z"/></svg>
+</a>
+
+<!-- Poster gallery modal: fixed header (title + close) with an independently
+     scrolling body below it, so the close button never scrolls out of view. -->
+<div class="poster-modal" id="posterModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="poster-modal-head">
+    <div>
+      <span class="tag" id="pmTag">Brand identity</span>
+      <h3 id="pmTitle">Project name</h3>
+    </div>
+    <button class="poster-close" id="pmClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="poster-scroll">
+    <div class="poster-inner">
+      <div class="poster-grid" id="pmGrid"></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
