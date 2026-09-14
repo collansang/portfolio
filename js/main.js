@@ -18,7 +18,9 @@ panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 const grid = document.getElementById('workGrid');
 grid.innerHTML = PROJECTS.map((p, i) => `
   <article class="work-card" data-cat="${p.cat}" data-idx="${i}" style="--c1:${p.c1};--c2:${p.c2};" tabindex="0" role="button" aria-label="View posters for ${p.name}">
-    <div class="swatch" style="background:linear-gradient(140deg,var(--c1),var(--c2));"></div>
+    <div class="swatch">
+      <img src="${p.cover}" alt="${p.name}">
+    </div>
     <div class="veil"></div>
     <span class="num">${String(i + 1).padStart(2, '0')}</span>
     <span class="expand-hint"><svg viewBox="0 0 24 24" fill="none" stroke="#faf8f4" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
@@ -41,44 +43,140 @@ filterBtns.forEach(btn => {
 });
 
 // ---- Poster modal ----
+// ---- Poster modal ----
 const modal = document.getElementById('posterModal');
 const pmTag = document.getElementById('pmTag');
 const pmTitle = document.getElementById('pmTitle');
-const pmGrid = document.getElementById('pmGrid');
+const pmImage = document.getElementById('pmImage');
+const pmProgress = document.getElementById('pmProgress');
+const pmPrev = document.getElementById('pmPrev');
+const pmNext = document.getElementById('pmNext');
 const pmClose = document.getElementById('pmClose');
+
+let currentProject = null;
+let currentPoster = 0;
+
+function showPoster() {
+  const p = PROJECTS[currentProject];
+  const poster = p.posters[currentPoster];
+
+  pmImage.classList.remove('poster-changing');
+
+  void pmImage.offsetWidth;
+
+  pmImage.src = poster.image;
+  pmImage.alt = poster.label;
+
+  pmImage.classList.add('poster-changing');
+
+  pmProgress.textContent =
+    `${String(currentPoster + 1).padStart(2, '0')} / ${String(p.posters.length).padStart(2, '0')}`;
+
+  pmPrev.disabled = currentPoster === 0;
+  pmNext.disabled = currentPoster === p.posters.length - 1;
+}
 
 function openProject(idx) {
   const p = PROJECTS[idx];
+
+  currentProject = idx;
+  currentPoster = 0;
+
   pmTag.textContent = p.tag;
   pmTitle.textContent = p.name;
-  pmGrid.innerHTML = p.posters.map(ps => `
-    <div class="poster-tile" style="background:linear-gradient(150deg, ${ps.c1}, ${ps.c2});">
-      <span>${ps.label}</span>
-    </div>
-  `).join('');
-  modal.querySelector('.poster-scroll').scrollTop = 0;
+
+  showPoster();
+
   modal.classList.add('show');
   modal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('modal-open');
+
   pmClose.focus();
 }
+
 function closeProject() {
   modal.classList.remove('show');
   modal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('modal-open');
 }
+
+function nextPoster() {
+  if (currentProject === null) return;
+
+  const p = PROJECTS[currentProject];
+
+  if (currentPoster < p.posters.length - 1) {
+    currentPoster++;
+    showPoster();
+  }
+}
+
+function previousPoster() {
+  if (currentProject === null) return;
+
+  if (currentPoster > 0) {
+    currentPoster--;
+    showPoster();
+  }
+}
+
+// Open project
 grid.addEventListener('click', (e) => {
   const card = e.target.closest('.work-card');
-  if (card) openProject(Number(card.dataset.idx));
+
+  if (card) {
+    openProject(Number(card.dataset.idx));
+  }
 });
+
+// Keyboard access for project cards
 grid.addEventListener('keydown', (e) => {
   if (e.key === 'Enter' || e.key === ' ') {
     const card = e.target.closest('.work-card');
-    if (card) { e.preventDefault(); openProject(Number(card.dataset.idx)); }
+
+    if (card) {
+      e.preventDefault();
+      openProject(Number(card.dataset.idx));
+    }
   }
 });
+
+// Navigation buttons
+pmNext.addEventListener('click', nextPoster);
+pmPrev.addEventListener('click', previousPoster);
+// Touch swipe navigation
+let touchStartX = 0;
+let touchEndX = 0;
+
+pmImage.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+pmImage.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+
+  const distance = touchEndX - touchStartX;
+
+  if (Math.abs(distance) < 50) return;
+
+  if (distance < 0) {
+    nextPoster();
+  } else {
+    previousPoster();
+  }
+});
+
+// Close button
 pmClose.addEventListener('click', closeProject);
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeProject(); });
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (!modal.classList.contains('show')) return;
+
+  if (e.key === 'Escape') closeProject();
+  if (e.key === 'ArrowRight') nextPoster();
+  if (e.key === 'ArrowLeft') previousPoster();
+});
 
 // ---- Testimonial accordion ----
 document.querySelectorAll('.t-item-head').forEach(head => {

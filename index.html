@@ -296,22 +296,51 @@ Share a few details about your project, including the design you need, your dead
 <!-- Poster gallery modal: fixed header (title + close) with an independently
      scrolling body below it, so the close button never scrolls out of view. -->
 <div class="poster-modal" id="posterModal" role="dialog" aria-modal="true" aria-hidden="true">
+
   <div class="poster-modal-head">
     <div>
       <span class="tag" id="pmTag">Brand identity</span>
       <h3 id="pmTitle">Project name</h3>
     </div>
+
     <button class="poster-close" id="pmClose" aria-label="Close">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M6 6l12 12M18 6L6 18"/>
+      </svg>
     </button>
   </div>
-  <div class="poster-scroll">
-    <div class="poster-inner">
-      <div class="poster-grid" id="pmGrid"></div>
-    </div>
-  </div>
-</div>
 
+  <div class="poster-scroll">
+
+    <div class="poster-inner">
+
+      <!-- Single active poster -->
+      <div class="poster-viewer">
+        <img id="pmImage" src="" alt="">
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Case study navigation -->
+  <div class="poster-controls">
+
+    <button class="poster-nav" id="pmPrev" aria-label="Previous poster">
+      ←
+    </button>
+
+    <span class="poster-progress" id="pmProgress">
+      01 / 13
+    </span>
+
+    <button class="poster-nav" id="pmNext" aria-label="Next poster">
+      →
+    </button>
+
+  </div>
+
+</div>
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
 </body>
