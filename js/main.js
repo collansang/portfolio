@@ -56,18 +56,48 @@ const pmClose = document.getElementById('pmClose');
 let currentProject = null;
 let currentPoster = 0;
 
+/* --------------------------------
+   PRELOAD PROJECT IMAGES
+--------------------------------- */
+
+function preloadProjectImages(project) {
+  if (!project || !project.posters) return;
+
+  project.posters.forEach((poster) => {
+    const img = new Image();
+    img.src = poster.image;
+  });
+}
+
+
+/* --------------------------------
+   SHOW CURRENT POSTER
+--------------------------------- */
+
 function showPoster() {
   const p = PROJECTS[currentProject];
   const poster = p.posters[currentPoster];
 
-  pmImage.classList.remove('poster-changing');
+  /*
+    Do NOT remove the current image first.
+    This prevents the blank/blink while
+    the next image is loading.
+  */
 
-  void pmImage.offsetWidth;
+  const newImage = new Image();
 
-  pmImage.src = poster.image;
-  pmImage.alt = poster.label;
+  newImage.onload = () => {
+    pmImage.classList.remove('poster-changing');
 
-  pmImage.classList.add('poster-changing');
+    pmImage.src = poster.image;
+    pmImage.alt = poster.label;
+
+    void pmImage.offsetWidth;
+
+    pmImage.classList.add('poster-changing');
+  };
+
+  newImage.src = poster.image;
 
   pmProgress.textContent =
     `${String(currentPoster + 1).padStart(2, '0')} / ${String(p.posters.length).padStart(2, '0')}`;
@@ -75,6 +105,11 @@ function showPoster() {
   pmPrev.disabled = currentPoster === 0;
   pmNext.disabled = currentPoster === p.posters.length - 1;
 }
+
+
+/* --------------------------------
+   OPEN PROJECT
+--------------------------------- */
 
 function openProject(idx) {
   const p = PROJECTS[idx];
@@ -87,6 +122,12 @@ function openProject(idx) {
 
   showPoster();
 
+  /*
+    Start loading all project images
+    immediately in the background.
+  */
+  preloadProjectImages(p);
+
   modal.classList.add('show');
   modal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('modal-open');
@@ -94,11 +135,21 @@ function openProject(idx) {
   pmClose.focus();
 }
 
+
+/* --------------------------------
+   CLOSE PROJECT
+--------------------------------- */
+
 function closeProject() {
   modal.classList.remove('show');
   modal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('modal-open');
 }
+
+
+/* --------------------------------
+   NEXT POSTER
+--------------------------------- */
 
 function nextPoster() {
   if (currentProject === null) return;
@@ -111,6 +162,11 @@ function nextPoster() {
   }
 }
 
+
+/* --------------------------------
+   PREVIOUS POSTER
+--------------------------------- */
+
 function previousPoster() {
   if (currentProject === null) return;
 
@@ -120,7 +176,11 @@ function previousPoster() {
   }
 }
 
-// Open project
+
+/* --------------------------------
+   PROJECT CARD CLICK
+--------------------------------- */
+
 grid.addEventListener('click', (e) => {
   const card = e.target.closest('.work-card');
 
@@ -129,7 +189,11 @@ grid.addEventListener('click', (e) => {
   }
 });
 
-// Keyboard access for project cards
+
+/* --------------------------------
+   PROJECT CARD KEYBOARD
+--------------------------------- */
+
 grid.addEventListener('keydown', (e) => {
   if (e.key === 'Enter' || e.key === ' ') {
     const card = e.target.closest('.work-card');
@@ -141,10 +205,20 @@ grid.addEventListener('keydown', (e) => {
   }
 });
 
-// Navigation buttons
+
+/* --------------------------------
+   MODAL CONTROLS
+--------------------------------- */
+
 pmNext.addEventListener('click', nextPoster);
 pmPrev.addEventListener('click', previousPoster);
-// Touch swipe navigation
+pmClose.addEventListener('click', closeProject);
+
+
+/* --------------------------------
+   SWIPE SUPPORT
+--------------------------------- */
+
 let touchStartX = 0;
 let touchEndX = 0;
 
@@ -166,16 +240,25 @@ pmImage.addEventListener('touchend', (e) => {
   }
 });
 
-// Close button
-pmClose.addEventListener('click', closeProject);
 
-// Keyboard navigation
+/* --------------------------------
+   KEYBOARD CONTROLS
+--------------------------------- */
+
 document.addEventListener('keydown', (e) => {
   if (!modal.classList.contains('show')) return;
 
-  if (e.key === 'Escape') closeProject();
-  if (e.key === 'ArrowRight') nextPoster();
-  if (e.key === 'ArrowLeft') previousPoster();
+  if (e.key === 'Escape') {
+    closeProject();
+  }
+
+  if (e.key === 'ArrowRight') {
+    nextPoster();
+  }
+
+  if (e.key === 'ArrowLeft') {
+    previousPoster();
+  }
 });
 
 // ---- Testimonial accordion ----
