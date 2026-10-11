@@ -67,13 +67,13 @@ const PROJECTS = [
   cat: 'print',
   tag: 'Menu Design',
   name: 'Kifood Menu',
-  cover: 'assets/projects/Print_Designs/kifood_menu.png',
+  cover: 'assets/projects/Print_Designs/kifood_menu.webp',
   c1: '#d8c5ad',
   c2: '#0a433c',
   posters: [
     {
       label: '01 — Menu Design',
-      image: 'assets/projects/Print_Designs/kifood_menu.png'
+      image: 'assets/projects/Print_Designs/kifood_menu.webp'
     }
   ]
 },
@@ -82,25 +82,25 @@ const PROJECTS = [
   cat: 'brand',
   tag: 'Collaborative Brand Identity',
   name: 'The Urban Inn',
-  cover: 'assets/projects/Collaborative_Brand/01-cover.png',
+  cover: 'assets/projects/Collaborative_Brand/01-cover.webp',
   c1: '#252525',
   c2: '#B86B4B',
   posters: [
     {
       label: '01 — Brand Identity',
-      image: 'assets/projects/Collaborative_Brand/01-cover.png'
+      image: 'assets/projects/Collaborative_Brand/01-cover.webp'
     },
     {
       label: '02 — Logo Design',
-      image: 'assets/projects/Collaborative_Brand/02-logo.png'
+      image: 'assets/projects/Collaborative_Brand/02-logo.webp'
     },
     {
       label: '03 — Colour Palette',
-      image: 'assets/projects/Collaborative_Brand/03-colours.png'
+      image: 'assets/projects/Collaborative_Brand/03-colours.webp'
     },
     {
       label: '04 — Brand Applications',
-      image: 'assets/projects/Collaborative_Brand/04-applications.png'
+      image: 'assets/projects/Collaborative_Brand/04-applications.webp'
     }
   ]
 },
@@ -109,29 +109,29 @@ const PROJECTS = [
   cat: 'print',
   tag: 'Editorial & Book Design',
   name: 'Becoming Better, One Day at a Time',
-  cover: 'assets/projects/Ebook_Design/01-cover.png',
+  cover: 'assets/projects/Ebook_Design/01-cover.webp',
   c1: '#798C7F',
   c2: '#2b2c30',
   posters: [
     {
       label: '01 — Book Cover',
-      image: 'assets/projects/Ebook_Design/01-cover.png'
+      image: 'assets/projects/Ebook_Design/01-cover.webp'
     },
     {
       label: '02 — Contents',
-      image: 'assets/projects/Ebook_Design/02-contents.png'
+      image: 'assets/projects/Ebook_Design/02-contents.webp'
     },
     {
       label: '03 — Chapter Opener',
-      image: 'assets/projects/Ebook_Design/03-Intro.png'
+      image: 'assets/projects/Ebook_Design/03-Intro.webp'
     },
     {
       label: '04 — Interior Layout',
-      image: 'assets/projects/Ebook_Design/04-interior-layout.png'
+      image: 'assets/projects/Ebook_Design/04-interior-layout.webp'
     },
     {
       label: '05 — Interior Layout',
-      image: 'assets/projects/Ebook_Design/05-interior-layout.png'
+      image: 'assets/projects/Ebook_Design/05-interior-layout.webp'
     }
   ]
 },
